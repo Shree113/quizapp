@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JCT College Quiz Competition</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="registrationSection" class="container">
+    <h1>JCT College of Engineering and Technology</h1>
+    
+    <form id="registrationForm">
+      <label>Name</label>
+      <input type="text" id="name" required>
+      <label>College</label>
+      <input type="text" id="college" required>
+      <label>Department</label>
+      <input type="text" id="department" required>
+      <label>Year</label>
+      <select id="year" required>
+        <option value="1">1st Year</option>
+        <option value="2">2nd Year</option>
+        <option value="3">3rd Year</option>
+        <option value="4">4th Year</option>
+      </select>
+      <button type="submit">Start Quiz</button>
+    </form>
+    <button onclick="adminLogin()">Admin Access</button>
+  </div>
+
+  <div id="quizSection" class="container">
+    <h2>Quiz Time!</h2>
+    <p id="questionText"></p>
+    <div id="choicesContainer"></div>
+    <button id="nextButton" style="display:none;" onclick="nextQuestion()">Next</button>
+  </div>
+
+  <div id="thankYouMessage" class="container">
+    <h2>Thank you for attending the quiz!</h2>
+    <p>Your final score is: <span id="finalScore"></span></p>
+  </div>
+
+  <div id="adminPanel" class="container">
+    <h2>Admin Panel - Leaderboard</h2>
+    <table border="2" width="100%">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Name</th>
+          <th>College</th>
+          <th>Department</th>
+          <th>Year</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody id="userScores"></tbody>
+    </table>
+    <button onclick="closeAdminPanel()">Close</button>
+  </div>
+
+  <script src="script.js">
+    
+  </script>
+</body>
+</html>
